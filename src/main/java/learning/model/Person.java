@@ -1,4 +1,4 @@
-package learning.lambda;
+package learning.model;
 
 public class Person {
 	
@@ -39,9 +39,9 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "Person[id="+this.getId()+", First Name="+this.getFirstName()+", Last Name="+this.getLastName()+", Age="+this.getAge()+"]";
+		return "Person [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + "]";
 	}
 }
