@@ -1,7 +1,5 @@
 package learning.clonning;
 
-import learning.model.Employee;
-
 public class CloneExample implements Cloneable {
 
 	private Employee emploee; 
@@ -16,11 +14,9 @@ public class CloneExample implements Cloneable {
 	}
 
 	public static void main(String[] args) throws CloneNotSupportedException  {
-
 		CloneExample obj = new CloneExample(new Employee(12));
 		CloneExample obj1 = obj.clone();
 		CloneExample obj2 = obj.clone();
-		
 		System.out.println("obj  = "+obj);
 		System.out.println("obj1 = "+obj1);
 		System.out.println("obj2 = "+obj2);
@@ -30,13 +26,10 @@ public class CloneExample implements Cloneable {
 //		obj1 = CloneExample [emploee=learning.model.Employee@7852e922]
 //		obj2 = CloneExample [emploee=learning.model.Employee@7852e922]
 		
-	    //  =======Output[After commenting line 45]=========
+	    //  =======Output[After commenting line 42]=========
 //		obj  = CloneExample [emploee=learning.model.Employee@7852e922]
 //		obj1 = CloneExample [emploee=learning.model.Employee@4e25154f]
-//		obj2 = CloneExample [emploee=learning.model.Employee@70dea4e]
-
-		
-		
+//		obj2 = CloneExample [emploee=learning.model.Employee@70dea4e]				
 	}
 
 	@Override
@@ -45,4 +38,27 @@ public class CloneExample implements Cloneable {
 		clone.emploee = this.emploee.clone(); // To be eager cloning of EmbeddedObject
         return clone;
     }
+}
+
+class Employee implements Cloneable{
+
+	public Employee(int id) {
+		super();
+		this.id = id;
+	}
+
+	private int id;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	@Override
+   public Employee clone() throws CloneNotSupportedException {
+       return (Employee) super.clone();
+   }	
 }

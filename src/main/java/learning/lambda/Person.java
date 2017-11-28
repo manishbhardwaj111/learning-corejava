@@ -1,4 +1,4 @@
-package learning.model;
+package learning.lambda;
 
 public class Person {
 	
