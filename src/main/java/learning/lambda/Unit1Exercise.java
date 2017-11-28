@@ -3,6 +3,7 @@ package learning.lambda;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import learning.model.Person;
 
 public class Unit1Exercise {
 
