@@ -26,7 +26,7 @@ public class CloneExample implements Cloneable {
 //		obj1 = CloneExample [emploee=learning.model.Employee@7852e922]
 //		obj2 = CloneExample [emploee=learning.model.Employee@7852e922]
 		
-	    //  =======Output[After commenting line 42]=========
+	    //  =======Output[After commenting line 38]=========
 //		obj  = CloneExample [emploee=learning.model.Employee@7852e922]
 //		obj1 = CloneExample [emploee=learning.model.Employee@4e25154f]
 //		obj2 = CloneExample [emploee=learning.model.Employee@70dea4e]				
