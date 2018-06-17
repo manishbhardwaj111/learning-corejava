@@ -65,13 +65,11 @@ class Temp {
 
 class Thread1 extends Thread {
 	Shared s;
-
 	public Thread1(Shared s, String str) {
 		super(str);
 		this.s = s;
 		start();
 	}
-
 	public void run() {
 		s.show3(Thread.currentThread().getName(), 10);
 	}
@@ -79,13 +77,11 @@ class Thread1 extends Thread {
 
 class Thread2 extends Thread {
 	Shared s;
-
 	public Thread2(Shared s, String str) {
 		super(str);
 		this.s = s;
 		start();
 	}
-
 	public void run() {
 		s.show3(Thread.currentThread().getName(), 20);
 	}
@@ -93,13 +89,11 @@ class Thread2 extends Thread {
 
 class Thread3 extends Thread {
 	Shared s;
-
 	public Thread3(Shared s, String str) {
 		super(str);
 		this.s = s;
 		start();
 	}
-
 	public void run() {
 		s.show3(Thread.currentThread().getName(), 30);
 	}
